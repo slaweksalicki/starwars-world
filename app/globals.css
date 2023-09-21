@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -93,11 +93,53 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-image: url(/img/stars-bg.jpg);
+  background-size: cover;
+  font-family: var(--font-mono);
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    "head head"
+    "nav main";
+  height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto;
+    grid-template-areas:
+      "head"
+      "nav"
+      "main";
+  }
+}
+
+header {
+  grid-area: head;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+  padding: 2rem 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {

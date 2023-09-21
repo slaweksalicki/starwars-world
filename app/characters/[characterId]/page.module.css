@@ -1,0 +1,27 @@
+.character {
+  background-color: rgba(251, 252, 255, 0.9);
+  border-radius: 1rem;
+  color: black;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.heading,
+.character p {
+  margin-bottom: 1rem;
+}
+
+.character ul {
+  padding-left: 2rem;
+}
+
+.character li {
+  margin-bottom: 0.5rem;
+}

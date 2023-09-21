@@ -1,0 +1,23 @@
+.heading {
+  margin-bottom: 3rem;
+  border-bottom: 2px dashed white;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: dotted 1px white;
+}
+
+.item:hover {
+  background-color: rgba(64, 67, 91, 0.8);
+  cursor: pointer;
+}
+
+.img {
+  object-fit: cover;
+}
